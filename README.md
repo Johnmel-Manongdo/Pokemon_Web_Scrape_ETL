@@ -41,17 +41,29 @@ This project involves scraping data from a Pokemon website (https://pokemondb.ne
 - Python 3.8+
 - Microsoft SQL Server installed and running
 - Required Python libraries:
+  - aiohttp
+  - beautifulsoup4
+  - pandas
+  - pyodbc
 
-```
-pip install aiohttp beautifulsoup4 pandas pyodbc
-```
+#### How to use
 
-## Clone the Repository
-
-```
-git clone https://github.com/Johnmel-Manongdo/Pokemon_Web_Scrape_ETL.git
-cd Pokemon_Web_Scrape_ETL
-```
+1. **Clone the repository:**
+    ```
+    git clone https://github.com/Johnmel-Manongdo/Pokemon_Web_Scrape_ETL.git
+    ```
+2. **Navigate to the project directory:**
+    ```
+    cd Pokemon_Web_Scrape_ETL
+    ```
+3. **Install the required dependencies:**
+    ```
+    pip install aiohttp beautifulsoup4 pandas pyodbc
+    ```
+4. **Run the application:**
+    ```
+    python extract.py
+    ```
 
 ## Configuration
 
@@ -65,24 +77,6 @@ conn = pyodbc.connect(
     "Trusted_Connection=yes;"
 )
 ```
-
-## Running the Project
-
-1. **Extract Pokémon Data:** Scrape data from the Pokemon website.
-
-```python extract.py```
-
-  This will generate a CSV file pokemon_data.csv containing the raw data.
-
-2. **Transform and Clean the Data:** Clean and transform the scraped data.
-
-```python transform.py```
-
-  This will generate a cleaned CSV file pokemon_data_cleaned.csv.
-
-3. **Load Data to SQL Server:** Load the transformed data into the SQL Server database.
-
-```python load.py```
 
 ## Project Structure
 
