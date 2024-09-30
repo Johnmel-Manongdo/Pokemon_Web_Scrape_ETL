@@ -46,25 +46,6 @@ This project involves scraping data from a Pokemon website (https://pokemondb.ne
   - pandas
   - pyodbc
 
-#### How to use
-
-1. **Clone the repository:**
-    ```
-    git clone https://github.com/Johnmel-Manongdo/Pokemon_Web_Scrape_ETL.git
-    ```
-2. **Navigate to the project directory:**
-    ```
-    cd Pokemon_Web_Scrape_ETL
-    ```
-3. **Install the required dependencies:**
-    ```
-    pip install aiohttp beautifulsoup4 pandas pyodbc
-    ```
-4. **Run the application:**
-    ```
-    python extract.py
-    ```
-
 ## Configuration
 
 Update your database connection details in `load.py`:
@@ -76,17 +57,6 @@ conn = pyodbc.connect(
     "Database=your_database_name;"
     "Trusted_Connection=yes;"
 )
-```
-
-## Project Structure
-
-```
-├── README.md           # Project documentation
-├── extract.py          # Web scraping logic using aiohttp and BeautifulSoup
-├── transform.py        # Data cleaning and transformation logic using pandas
-├── load.py             # SQL Server loading logic using pyodbc
-├── pokemon_data.csv    # Raw scraped data
-├── pokemon_data_cleaned.csv  # Cleaned and transformed data
 ```
 
 ## Database Schema
@@ -117,11 +87,6 @@ CREATE TABLE tbl_pokemon (
 - Add error handling for asynchronous tasks and database loading.
 - Automate the pipeline to run at scheduled intervals.
 - Extend the scraper to gather additional Pokemon data or handle other websites.
-
-## License
-
-This project is licensed under the MIT License.
-
 
 
 
